@@ -1,0 +1,8 @@
+workspace/
+nltk_data/
+browser/
+canvas/
+media/
+logs/
+delivery-queue/
+*.bak*

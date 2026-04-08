@@ -1,0 +1,285 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.28",
+    "lastTouchedAt": "2026-04-07T12:59:10.454Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-26T10:42:49.708Z",
+    "lastRunVersion": "2026.3.2",
+    "lastRunCommand": "configure",
+    "lastRunMode": "local"
+  },
+  "browser": {
+    "executablePath": "/home/openclaw/.cache/ms-playwright/chromium-1208/chrome-linux64/chrome",
+    "noSandbox": true
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "google/gemini-1.5-flash",
+        "fallbacks": [
+          "google/gemini-1.5-flash"
+        ]
+      },
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "thinkingDefault": "off",
+      "timeoutSeconds": 3600,
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8,
+        "runTimeoutSeconds": 3600
+      },
+      "sandbox": {
+        "mode": "off",
+        "workspaceAccess": "rw",
+        "sessionToolsVisibility": "all",
+        "docker": {
+          "network": "bridge",
+          "binds": [
+            "/home/openclaw/.openclaw/workspace/homebrew:/home/openclaw/.openclaw/workspace/homebrew:ro",
+            "/home/openclaw/.openclaw/workspace/skills:/home/openclaw/.openclaw/workspace/skills:ro",
+            "/home/openclaw/.openclaw/workspace/npm:/home/openclaw/.openclaw/workspace/npm:ro"
+          ]
+        }
+      }
+    },
+    "list": [
+      {
+        "id": "main",
+        "model": "google/gemini-1.5-flash",
+        "subagents": {
+          "allowAgents": [
+            "rafael",
+            "uriel",
+            "gabriel",
+            "raguel",
+            "samael",
+            "sarael",
+            "azrael",
+            "remiel",
+            "zadkiel",
+            "metis"
+          ]
+        }
+      },
+      {
+        "id": "rafael",
+        "name": "rafael",
+        "workspace": "/home/openclaw/.openclaw/workspace-rafael",
+        "agentDir": "/home/openclaw/.openclaw/agents/rafael/agent",
+        "model": "google/gemini-1.5-flash",
+        "subagents": {
+          "allowAgents": [
+            "main",
+            "uriel",
+            "gabriel",
+            "raguel",
+            "samael"
+          ]
+        }
+      },
+      {
+        "id": "uriel",
+        "name": "uriel",
+        "workspace": "/home/openclaw/.openclaw/workspace-uriel",
+        "agentDir": "/home/openclaw/.openclaw/agents/uriel/agent",
+        "model": "google/gemini-1.5-flash",
+        "subagents": {
+          "allowAgents": [
+            "main",
+            "rafael",
+            "gabriel",
+            "raguel",
+            "samael"
+          ]
+        }
+      },
+      {
+        "id": "gabriel",
+        "name": "gabriel",
+        "workspace": "/home/openclaw/.openclaw/workspace-gabriel",
+        "agentDir": "/home/openclaw/.openclaw/agents/gabriel/agent",
+        "model": "google/gemini-1.5-flash",
+        "subagents": {
+          "allowAgents": [
+            "main",
+            "rafael",
+            "uriel",
+            "raguel",
+            "samael"
+          ]
+        }
+      },
+      {
+        "id": "raguel",
+        "name": "raguel",
+        "workspace": "/home/openclaw/.openclaw/workspace-raguel",
+        "agentDir": "/home/openclaw/.openclaw/agents/raguel/agent",
+        "model": "google/gemini-1.5-flash",
+        "subagents": {
+          "allowAgents": [
+            "main",
+            "rafael",
+            "uriel",
+            "gabriel",
+            "samael"
+          ]
+        }
+      },
+      {
+        "id": "samael",
+        "name": "samael",
+        "workspace": "/home/openclaw/.openclaw/workspace-samael",
+        "agentDir": "/home/openclaw/.openclaw/agents/samael/agent",
+        "model": "google/gemini-1.5-flash",
+        "subagents": {
+          "allowAgents": [
+            "main",
+            "rafael",
+            "uriel",
+            "gabriel",
+            "raguel"
+          ]
+        }
+      },
+      {
+        "id": "sarael",
+        "name": "sarael",
+        "workspace": "/home/openclaw/.openclaw/workspace-sarael",
+        "agentDir": "/home/openclaw/.openclaw/agents/sarael/agent",
+        "model": "google/gemini-1.5-flash"
+      },
+      {
+        "id": "azrael",
+        "name": "azrael",
+        "workspace": "/home/openclaw/.openclaw/workspace-azrael",
+        "agentDir": "/home/openclaw/.openclaw/agents/azrael/agent",
+        "model": "google/gemini-1.5-flash"
+      },
+      {
+        "id": "remiel",
+        "name": "remiel",
+        "workspace": "/home/openclaw/.openclaw/workspace-remiel",
+        "agentDir": "/home/openclaw/.openclaw/agents/remiel/agent",
+        "model": "google/gemini-1.5-flash"
+      },
+      {
+        "id": "zadkiel",
+        "name": "zadkiel",
+        "workspace": "/home/openclaw/.openclaw/workspace-zadkiel",
+        "agentDir": "/home/openclaw/.openclaw/agents/zadkiel/agent",
+        "model": "google/gemini-1.5-flash"
+      },
+      {
+        "id": "metis",
+        "name": "metis",
+        "workspace": "/home/openclaw/.openclaw/workspace-metis",
+        "agentDir": "/home/openclaw/.openclaw/agents/metis/agent",
+        "model": "google/gemini-1.5-flash"
+      }
+    ]
+  },
+  "tools": {
+    "web": {
+      "search": {}
+    },
+    "sessions": {
+      "visibility": "all"
+    },
+    "agentToAgent": {
+      "enabled": true,
+      "allow": [
+        "main",
+        "rafael",
+        "uriel",
+        "gabriel",
+        "raguel",
+        "samael"
+      ]
+    }
+  },
+  "bindings": [
+    {
+      "agentId": "main",
+      "match": {
+        "channel": "telegram"
+      }
+    }
+  ],
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "channels": {
+    "whatsapp": {
+      "enabled": true,
+      "dmPolicy": "allowlist",
+      "selfChatMode": true,
+      "allowFrom": [
+        "+6285133221170",
+        "+6285845730981",
+        "+6281938953639",
+        "+6285161502503",
+        "+6281345985715",
+        "+6285159322166",
+        "+6282353412467",
+        "+6282153544242"
+      ],
+      "groupPolicy": "open",
+      "debounceMs": 8000,
+      "mediaMaxMb": 50
+    },
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "open",
+      "botToken": "8676324346:AAEfeNjdyn0VEkLMP7DUaMi3sjCWcGiIAc4",
+      "allowFrom": [
+        "*"
+      ],
+      "groupPolicy": "open",
+      "streaming": "partial"
+    }
+  },
+  "gateway": {
+    "mode": "local",
+    "bind": "lan",
+    "controlUi": {
+      "enabled": true,
+      "allowedOrigins": [
+        "*"
+      ],
+      "allowInsecureAuth": true,
+      "dangerouslyDisableDeviceAuth": true
+    },
+    "auth": {
+      "token": "f7b7d9f71bc17a33b5ee308aad6cff226042137c8e143c8c85f0984ae6418438"
+    },
+    "trustedProxies": [
+      "127.0.0.1"
+    ],
+    "remote": {
+      "url": "ws://143.198.159.10:18789",
+      "token": "b4031523cf90eb67d366dbc5f7edbfc41c1b488309ea270748e654ed4db433e8"
+    }
+  },
+  "plugins": {
+    "entries": {
+      "whatsapp": {
+        "enabled": true,
+        "config": {}
+      },
+      "brave": {
+        "enabled": true,
+        "config": {
+          "webSearch": {
+            "apiKey": "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"
+          }
+        }
+      }
+    }
+  }
+}

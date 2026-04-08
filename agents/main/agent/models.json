@@ -1,0 +1,27 @@
+{
+  "providers": {
+    "google": {
+      "apiKey": "GOOGLE_API_KEY",
+      "api": "google",
+      "models": [
+        {
+          "id": "gemini-1.5-flash",
+          "name": "Gemini 1.5 Flash",
+          "reasoning": false,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0.075,
+            "output": 0.3,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 1048576,
+          "maxTokens": 8192
+        }
+      ]
+    }
+  }
+}

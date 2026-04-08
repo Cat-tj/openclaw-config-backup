@@ -1,0 +1,12 @@
+{
+  "entries": [
+    {
+      "containerName": "openclaw-sbx-agent-main-f331f052",
+      "sessionKey": "agent:main",
+      "createdAtMs": 1772968925336,
+      "lastUsedAtMs": 1772974217317,
+      "image": "openclaw-sandbox:bookworm-slim",
+      "configHash": "1a906269e744cc3ac522bdb913d951dd487d0cbf632da43d11e0d72373a7523e"
+    }
+  ]
+}

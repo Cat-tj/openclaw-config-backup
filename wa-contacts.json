@@ -1,0 +1,32 @@
+{
+  "+6285133221170": {
+    "label": "Lucy",
+    "role": "owner",
+    "access": "full"
+  },
+  "+6285161502503": {
+    "label": "Kenny",
+    "role": "friend",
+    "access": "basic"
+  },
+  "+6281345985715": {
+    "label": "Ceka",
+    "role": "friend",
+    "access": "basic"
+  },
+  "+6285845730981": {
+    "label": "Rusdi",
+    "role": "business",
+    "access": "full"
+  },
+  "+6281938953639": {
+    "label": "Gateway",
+    "role": "system",
+    "access": "system"
+  },
+  "+6285159322166": {
+    "label": "Paul",
+    "role": "friend",
+    "access": "full"
+  }
+}

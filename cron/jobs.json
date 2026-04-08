@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "b9110520-e052-4b6e-a8cf-3112bb46e172",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "auto-dream",
+      "enabled": true,
+      "createdAtMs": 1775337289980,
+      "updatedAtMs": 1775617206900,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *",
+        "tz": "UTC"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "# Dream: Memory Consolidation\n\nYou are performing a dream — a reflective pass over your memory files. Synthesize what you've learned recently into durable, well-organized memories so that future sessions can orient quickly.\n\nMemory directory: ~/.openclaw/workspace/memory/\nMain memory: ~/.openclaw/workspace/MEMORY.md\n\n## Phase 1 — Orient\n\n- Read MEMORY.md to understand the current long-term memory state\n- List memory/ directory to see daily files and evaluations\n- Read the last 2-3 days of memory/YYYY-MM-DD.md files\n- Read memory/dream-log.json for last dream results\n- Read memory/lessons.json if it exists\n\n## Phase 2 — Gather Recent Signal\n\nLook for new information worth persisting from the last 48h:\n1. New decisions, discoveries, events from daily files\n2. Task quality patterns from memory/evaluations/\n3. Contradictions — facts in MEMORY.md that conflict with recent activity\n4. Stale entries — references to completed/cancelled projects\n\nFocus on SIGNAL, not noise.\n\n## Phase 3 — Consolidate\n\nFor each thing worth remembering:\n- If it updates existing MEMORY.md content → edit in place\n- If it's new long-term knowledge → add to appropriate section\n- If it contradicts existing memory → fix the old entry\n- Convert ALL relative dates to absolute (\"yesterday\" → actual date)\n- Merge duplicate entries\n\nAlso check if memory/lessons.json has patterns from evaluations that should be promoted.\n\n## Phase 4 — Prune and Index\n\nMEMORY.md maintenance:\n- Remove entries about completed/cancelled projects (unless lesson is universal)\n- Remove outdated info (stale URLs, old infrastructure details)\n- Keep under 200 lines — if over, prune least-referenced entries\n- Ensure all sections are current and accurate\n\nDaily files older than 90 days: move to memory/archive/YYYY-MM/\n\n## Phase 5 — Log\n\nRead current memory/dream-log.json, then append your results:\n- What was added/updated/removed\n- MEMORY.md line count before and after\n- Files archived count\n- Set notable=true if significant changes were made\n- Keep only last 30 entries in the log\n- Write updated dream-log.json\n\nReturn a brief summary of what you consolidated, updated, or pruned. If nothing changed, say so.",
+        "timeoutSeconds": 300
+      },
+      "delivery": {
+        "mode": "announce"
+      },
+      "state": {
+        "nextRunAtMs": 1775703600000,
+        "lastRunAtMs": 1775617200072,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 6828,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 1,
+        "lastError": "User: arn:aws:iam::084801557098:user/n8n-bedrock-user is not authorized to perform: bedrock:InvokeModelWithResponseStream on resource: arn:aws:bedrock:us-east-1:084801557098:inference-profile/us.anthropic.claude-opus-4-6-v1 with an explicit deny in an identity-based policy: arn:aws:iam::084801557098:policy/Deny-Bedrock-All"
+      }
+    }
+  ]
+}

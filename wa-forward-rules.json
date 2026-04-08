@@ -1,0 +1,14 @@
+[
+  {
+    "from": "+6285161502503",
+    "action": "forward",
+    "to": "+6285133221170",
+    "label": "Forward Kenny → Lucy"
+  },
+  {
+    "from": "+6281345985715",
+    "action": "forward_summarize",
+    "to": "+6285133221170",
+    "label": "Forward+Summarize Ceka → Lucy"
+  }
+]

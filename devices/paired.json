@@ -1,0 +1,79 @@
+{
+  "00a4d4d998262e59da73541b69f319e616a7600bdd9f20f4c399cf4c66739f34": {
+    "deviceId": "00a4d4d998262e59da73541b69f319e616a7600bdd9f20f4c399cf4c66739f34",
+    "publicKey": "zwIDnH4cisxwdWvzsJ4xm2E8Kh3zBv62enqTslYuLvo",
+    "platform": "linux",
+    "clientId": "gateway-client",
+    "clientMode": "backend",
+    "role": "operator",
+    "roles": [
+      "operator"
+    ],
+    "scopes": [
+      "operator.admin",
+      "operator.read",
+      "operator.write",
+      "operator.approvals",
+      "operator.pairing"
+    ],
+    "approvedScopes": [
+      "operator.admin",
+      "operator.read",
+      "operator.write",
+      "operator.approvals",
+      "operator.pairing"
+    ],
+    "tokens": {
+      "operator": {
+        "token": "dkZ1vQ9B7c8wlhhnrycHOd3rFNpYzWoK8S9aoOhKYOU",
+        "role": "operator",
+        "scopes": [
+          "operator.admin",
+          "operator.approvals",
+          "operator.pairing",
+          "operator.read",
+          "operator.write"
+        ],
+        "createdAtMs": 1772968698519
+      }
+    },
+    "createdAtMs": 1772968698518,
+    "approvedAtMs": 1772968698518
+  },
+  "b6c51db0e6e2a095404eacfb55581e3f10978759b2d984fe304bec0d83bbb88e": {
+    "deviceId": "b6c51db0e6e2a095404eacfb55581e3f10978759b2d984fe304bec0d83bbb88e",
+    "publicKey": "JuOR5-uJHqziq4LyyS0jNnLDhd9yRk90ACqAL9jTA6A",
+    "platform": "MacIntel",
+    "clientId": "openclaw-control-ui",
+    "clientMode": "webchat",
+    "role": "operator",
+    "roles": [
+      "operator"
+    ],
+    "scopes": [
+      "operator.admin",
+      "operator.approvals",
+      "operator.pairing"
+    ],
+    "approvedScopes": [
+      "operator.admin",
+      "operator.approvals",
+      "operator.pairing"
+    ],
+    "tokens": {
+      "operator": {
+        "token": "heFe5lhsrbcilixtegpG3b2W6Ys76CRWtaDcgej58eU",
+        "role": "operator",
+        "scopes": [
+          "operator.admin",
+          "operator.approvals",
+          "operator.pairing"
+        ],
+        "createdAtMs": 1772968908440,
+        "lastUsedAtMs": 1772980135642
+      }
+    },
+    "createdAtMs": 1772968908440,
+    "approvedAtMs": 1772968908440
+  }
+}
